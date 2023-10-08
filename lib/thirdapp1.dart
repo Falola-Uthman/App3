@@ -10,8 +10,8 @@ class ThirdApp1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Color(0xFF0DCDAA),
-        body: SingleChildScrollView(
-          child: Center(
+        body: Center(
+          child: SingleChildScrollView(
             child: TextButton(
               onPressed: () {
                 Navigator.of(context)

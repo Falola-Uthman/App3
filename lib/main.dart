@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thirdapp/ThirdApp1.dart';
+import 'package:thirdapp/thirdapp1.dart';
 
 void main() {
   runApp(const Main());
