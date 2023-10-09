@@ -3,17 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:thirdapp/thirdapp5.dart';
 
-class ThirdApp3 extends StatefulWidget {
-  const ThirdApp3({super.key});
+class ThirdApp4 extends StatefulWidget {
+  const ThirdApp4({super.key});
 
   @override
-  State<ThirdApp3> createState() => _ThirdApp3State();
+  State<ThirdApp4> createState() => _ThirdApp3State();
 }
 
-class _ThirdApp3State extends State<ThirdApp3> {
-  bool switchState = true;
+class _ThirdApp3State extends State<ThirdApp4> {
   bool passwordVisible = true;
-
+  bool passwordVisible2 = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,13 +33,35 @@ class _ThirdApp3State extends State<ThirdApp3> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Welcome Back!',
+                'Create new account',
                 style: GoogleFonts.inter(
                     textStyle:
                         TextStyle(fontWeight: FontWeight.w700, fontSize: 24)),
               ),
               SizedBox(
                 height: 60,
+              ),
+              Text(
+                'Full Name',
+                style: GoogleFonts.inter(
+                    textStyle: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFF7C7C7C))),
+              ),
+              TextField(
+                  keyboardType: TextInputType.name,
+                  textInputAction: TextInputAction.send,
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                  decoration: InputDecoration(
+                      hintText: 'Enter your full name',
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black12),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black)))),
+              SizedBox(
+                height: 20,
               ),
               Text(
                 'Email address',
@@ -57,12 +78,12 @@ class _ThirdApp3State extends State<ThirdApp3> {
                   decoration: InputDecoration(
                       hintText: 'name@example.com',
                       enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFFF2F2F2)),
+                        borderSide: BorderSide(color: Colors.black12),
                       ),
                       focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Color(0xFFF2F2F2))))),
+                          borderSide: BorderSide(color: Colors.black)))),
               SizedBox(
-                height: 40,
+                height: 20,
               ),
               Text(
                 'Password',
@@ -91,34 +112,43 @@ class _ThirdApp3State extends State<ThirdApp3> {
                         borderSide: BorderSide(color: Color(0xFFF2F2F2)),
                       ),
                       focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Color(0xFFF2F2F2))))),
+                          borderSide: BorderSide(color: Colors.black)))),
               SizedBox(
                 height: 20,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Remember me',
-                    style: GoogleFonts.inter(
-                        textStyle: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400,
-                            color: Color(0xFF7C7C7C))),
-                  ),
-                  Switch(
-                      activeColor: Colors.white,
-                      activeTrackColor: Color(0xFF0DCDAA),
-                      value: switchState,
-                      onChanged: (value) {
-                        setState(() {
-                          switchState = value;
-                        });
-                      })
-                ],
+              Text(
+                'Re-Enter Password',
+                style: GoogleFonts.inter(
+                    textStyle: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFF7C7C7C))),
+              ),
+              TextField(
+                  keyboardType: TextInputType.text,
+                  obscureText: passwordVisible2,
+                  textInputAction: TextInputAction.send,
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  decoration: InputDecoration(
+                      suffixIcon: IconButton(
+                          onPressed: () {
+                            setState(() {
+                              passwordVisible2 = !passwordVisible2;
+                            });
+                          },
+                          icon: Icon(Icons.remove_red_eye_outlined,
+                              color: Colors.grey)),
+                      hintText: 'Enter your password',
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFFF2F2F2)),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black)))),
+              SizedBox(
+                height: 20,
               ),
               SizedBox(
-                height: 280,
+                height: 180,
               ),
               FilledButton(
                   onPressed: () {
@@ -133,7 +163,7 @@ class _ThirdApp3State extends State<ThirdApp3> {
                           borderRadius: BorderRadius.circular(10)),
                       backgroundColor: Color(0xFF0DCDAA)),
                   child: Text(
-                    'Sign in',
+                    'Sign up',
                     style:
                         GoogleFonts.inter(textStyle: TextStyle(fontSize: 16)),
                   )),

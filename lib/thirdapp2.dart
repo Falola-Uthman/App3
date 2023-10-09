@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:thirdapp/thirdapp3.dart';
+import 'package:thirdapp/thirdapp4.dart';
 
 class ThirdApp2 extends StatelessWidget {
   const ThirdApp2({super.key});
@@ -60,7 +61,7 @@ class ThirdApp2 extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context)
                         .push(CupertinoPageRoute(builder: (context) {
-                      return ThirdApp3();
+                      return ThirdApp4();
                     }));
                   },
                   style: OutlinedButton.styleFrom(
@@ -69,7 +70,7 @@ class ThirdApp2 extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10)),
                   ),
                   child: Text(
-                    'No account yet? ' 'Sign up',
+                    'No account yet? Sign up',
                     style: GoogleFonts.inter(
                         textStyle:
                             TextStyle(fontSize: 16, color: Colors.black)),
