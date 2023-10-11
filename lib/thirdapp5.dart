@@ -21,14 +21,14 @@ class ThirdApp5 extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: 10,
+                height: 11,
               ),
               SizedBox(
                 height: 100,
               ),
               Image.asset('assets/images/thirdapp5.png'),
               SizedBox(
-                height: 30,
+                height: 31,
               ),
               Text(
                 'Select Location',

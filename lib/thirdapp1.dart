@@ -24,7 +24,7 @@ class ThirdApp1 extends StatelessWidget {
                 style: GoogleFonts.bubblegumSans(
                     textStyle: TextStyle(
                         color: Colors.white,
-                        fontSize: 74,
+                        fontSize: 75,
                         fontWeight: FontWeight.w600)),
               ),
             ),

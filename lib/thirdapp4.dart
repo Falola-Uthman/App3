@@ -128,7 +128,7 @@ class _ThirdApp3State extends State<ThirdApp4> {
                   keyboardType: TextInputType.text,
                   obscureText: passwordVisible2,
                   textInputAction: TextInputAction.send,
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
                   decoration: InputDecoration(
                       suffixIcon: IconButton(
                           onPressed: () {
@@ -145,10 +145,7 @@ class _ThirdApp3State extends State<ThirdApp4> {
                       focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.black)))),
               SizedBox(
-                height: 20,
-              ),
-              SizedBox(
-                height: 180,
+                height: 200,
               ),
               FilledButton(
                   onPressed: () {

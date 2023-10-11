@@ -21,14 +21,14 @@ class ThirdApp2 extends StatelessWidget {
                 'Welcome!',
                 style: GoogleFonts.inter(
                     textStyle:
-                        TextStyle(fontWeight: FontWeight.w900, fontSize: 32)),
+                        TextStyle(fontWeight: FontWeight.w900, fontSize: 33)),
               ),
               SizedBox(
                 height: 10,
               ),
               Text('Sign in or create a new account',
                   style: GoogleFonts.inter(
-                      textStyle: TextStyle(fontSize: 16),
+                      textStyle: TextStyle(fontSize: 17),
                       color: Color(0xFF7C7C7C))),
               SizedBox(
                 height: 100,

@@ -93,7 +93,7 @@ class _ThirdApp3State extends State<ThirdApp3> {
                       focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Color(0xFFF2F2F2))))),
               SizedBox(
-                height: 20,
+                height: 21,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -102,7 +102,7 @@ class _ThirdApp3State extends State<ThirdApp3> {
                     'Remember me',
                     style: GoogleFonts.inter(
                         textStyle: TextStyle(
-                            fontSize: 18,
+                            fontSize: 19,
                             fontWeight: FontWeight.w400,
                             color: Color(0xFF7C7C7C))),
                   ),
