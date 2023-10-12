@@ -9,6 +9,7 @@ class ThirdApp2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final DateTime currentTime = DateTime.now();
     return Scaffold(
       body: Center(
         child: SingleChildScrollView(
@@ -74,7 +75,16 @@ class ThirdApp2 extends StatelessWidget {
                     style: GoogleFonts.inter(
                         textStyle:
                             TextStyle(fontSize: 16, color: Colors.black)),
-                  ))
+                  )),
+              FilledButton(
+                  onPressed: () async {
+                    await showDatePicker(
+                        initialDate: currentTime,
+                        firstDate: DateTime(2020),
+                        lastDate: DateTime(2035),
+                        context: context);
+                  },
+                  child: Text('Date Picker'))
             ],
           ),
         ),
